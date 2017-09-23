@@ -14,7 +14,7 @@ def _main():
     report_url = 'https://genomicexplorer.io/v1/reports/{}?population={}'.format(phenotype, population)
     response = requests.get(report_url, headers=headers)
     data = response.json()
-    print json.dumps(data)
+    print(json.dumps(data))
 
     chrom = 'chr1'
     start = '100000'
@@ -22,7 +22,7 @@ def _main():
     sequence_url = 'https://genomicexplorer.io/v1/genomes/sequence/?region={}:{}-{}'.format(chrom, start, end)
     response = requests.get(sequence_url, headers=headers)
     data = response.json()
-    print json.dumps(data)
+    print(json.dumps(data))
 
 if __name__ == '__main__':
     _main()
